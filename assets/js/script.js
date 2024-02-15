@@ -1,6 +1,8 @@
 let started = false;
 let interval;
 
+const audio = $("#audio")[0];
+
 function startTimer() {
     const timer = $("#timer");
     let minute = timer.text().split(":")[0];
@@ -26,7 +28,7 @@ function startTimer() {
             }
 
             timer.text(minute + ":" + second);
-        }, 1000);
+        }, 5);
     }
 }
 
@@ -46,11 +48,13 @@ function closeAlarm() {
 }
 
 function openModal() {
-    $("#modal").show();
+    $("#alarm").show();
+    audio.play();
 }
 
 function closeModal() {
-    $("#modal").hide();
+    $("#alarm").hide();
+    audio.pause();
 }
 
 function pauseTimer() {
@@ -77,3 +81,11 @@ function resetBlind() {
     const blinds = $("#values-blinds");
     blinds.text("25/50");
 }
+
+$(document).ready(function () {
+    $("#alarm").hide();
+
+    $("#modal").on("click", function () {
+        closeAlarm();
+    });
+});

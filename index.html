@@ -35,12 +35,13 @@
                 srcset="assets/images/pausa.png">
             <img src="assets/images/pausa.png" alt="botão stop" onclick="stopTimer()" srcset="assets/images/stop.png">
         </div>
-        <div class="alarm">
+
+        <audio id="audio" src="assets/audio/clock-alarm-8761.mp3" loop></audio>
+
+        <div class="alarm" id="alarm">
             <div id="modal" class="modal">
                 <div class="modal-content">
-                    <button onclick="closeAlarm()">
-                        Alarm
-                    </button>
+
                 </div>
             </div>
         </div>
