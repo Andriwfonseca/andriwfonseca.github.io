@@ -28,7 +28,7 @@ function startTimer() {
             }
 
             timer.text(minute + ":" + second);
-        }, 5);
+        }, 1000);
     }
 }
 
@@ -85,7 +85,7 @@ function resetBlind() {
 $(document).ready(function () {
     $("#alarm").hide();
 
-    $("#modal").on("click", function () {
+    $(document).on("click", "#alarm", function () {
         closeAlarm();
     });
 });
