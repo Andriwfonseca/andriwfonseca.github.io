@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <title>Poker Timer</title>
+</head>
+
+<body>
+    <div class="screen">
+        <div class="container">
+            <div class="backgroud-timer">
+                <div id="timer">
+                    15:00
+                </div>
+                <div>
+                    Blinds:
+                </div>
+                <div id="values-blinds">
+                    25/50
+                </div>
+            </div>
+        </div>
+        <div class="to-bend">
+            <img src="assets/images/double-point.png" onclick="toBendBlind()" alt="botão de dobrar blind" srcset="">
+            <img src="assets/images/undo.png" onclick="resetBlind()" alt="botão de dobrar blind" srcset="">
+        </div>
+        <div class="controls">
+            <img src="assets/images/botao-play.png" alt="botão play" onclick="startTimer()"
+                srcset="assets/images/botao-play.png">
+            <img src="assets/images/pausa.png" alt="botão pausa" onclick="pauseTimer()"
+                srcset="assets/images/pausa.png">
+            <img src="assets/images/pausa.png" alt="botão stop" onclick="stopTimer()" srcset="assets/images/stop.png">
+        </div>
+        <div class="alarm">
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <button onclick="closeAlarm()">
+                        Alarm
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="pages">
+
+        </div>
+    </div>
+</body>
+<script src="assets/js/jquery-3.7.1.min.js"></script>
+<script src="assets/js/script.js"></script>
+
+</html>
