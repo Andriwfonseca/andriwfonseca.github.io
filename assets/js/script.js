@@ -89,3 +89,20 @@ $(document).ready(function () {
         closeAlarm();
     });
 });
+
+if ("wakeLock" in navigator) {
+    navigator.wakeLock
+        .request("screen")
+        .then((wakeLock) => {
+            console.log("Bloqueio de tela adquirido com sucesso!");
+
+            wakeLock.addEventListener("release", () => {
+                console.log("Bloqueio de tela foi liberado.");
+            });
+        })
+        .catch((error) => {
+            console.error("Erro ao solicitar bloqueio de tela:", error);
+        });
+} else {
+    console.warn("API WakeLock não suportada neste navegador.");
+}
